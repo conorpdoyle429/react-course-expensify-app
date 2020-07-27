@@ -1,0 +1,26 @@
+// rem - better acccessibility support than pixels
+
+html {
+    font-size: 62.5%; // applying this to use base 10 rem e.g. 1rem = 10px
+}
+
+body {
+    background: white;
+    font-family: Helvetica, Arial, sans-serif; // trys to apply these in order
+}
+
+h1 {
+    font-size: $m-size;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.is-active {
+    font-weight: bold;
+}
