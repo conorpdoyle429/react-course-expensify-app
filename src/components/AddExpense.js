@@ -1,11 +1,11 @@
 import React from 'react';
 import ExpenseForm from './ExpenseForm';
 import { connect } from 'react-redux';
-import { addExpense } from '../actions/expenses';
+import { startAddExpense } from '../actions/expenses';
 
 export class AddExpense extends React.Component {
     onSubmit = (expense) => {
-        this.props.addExpense(expense);
+        this.props.startAddExpense(expense);
         this.props.history.push('/');
     };   
     render() {
@@ -42,7 +42,7 @@ export class AddExpense extends React.Component {
 // pass this as second argument in connect
 // this allows us to be able to test props.dispatch(...) with jest
 const mapDispatchToProps = (dispatch) => ({
-        addExpense: (expense) => dispatch(addExpense(expense))
+    startAddExpense: (expense) => dispatch(startAddExpense(expense))
     });
 
 export default connect(undefined, mapDispatchToProps)(AddExpense);
