@@ -1,12 +1,18 @@
 // rem - better acccessibility support than pixels
 
+* {
+    box-sizing: border-box; // sets height and width taking into account margin and padding
+}
+
 html {
     font-size: 62.5%; // applying this to use base 10 rem e.g. 1rem = 10px
 }
 
 body {
     background: white;
+    color: $dark-grey;
     font-family: Helvetica, Arial, sans-serif; // trys to apply these in order
+    line-height: 1.6; //space between paragraphs
 }
 
 h1 {

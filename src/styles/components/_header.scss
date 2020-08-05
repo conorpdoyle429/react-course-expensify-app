@@ -1,0 +1,18 @@
+.header {
+    background: $dark-blue;
+}
+
+.header__content {
+    align-items: center; //center vertically 
+    display: flex;
+    justify-content: space-between; // distribute space between title and logout
+    padding: $s-size 0; // top and bottom padding
+}
+
+.header__title {
+    color: white;
+    text-decoration: none; // clear the underline
+    h1 {
+        margin: 0;
+    }
+}

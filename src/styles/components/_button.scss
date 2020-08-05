@@ -1,0 +1,20 @@
+.button{
+    background: $blue;
+    border: none;
+    color: white;
+    display: inline-block; // make sure vertical margin and padding works
+    font-size: $font-size-large;
+    font-weight: 300;
+    line-height: 1;
+    padding: $s-size;
+    text-decoration: none; // remove underline
+}
+
+// button modifier to override background - for logout button
+.button--link {
+    background: none;
+}
+
+.button--secondary {
+    background: $grey;
+}

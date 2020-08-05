@@ -11,33 +11,21 @@ export class AddExpense extends React.Component {
     render() {
         return (
             <div>
-                <h1>This is from my add expense component</h1>
-                <ExpenseForm 
-                    onSubmit={this.onSubmit}
-                />
+                <div className="page-header">
+                    <div className="content-container">
+                        <h1 className="page-header__title">Add Expense</h1>
+                    </div>
+                </div>
+                <div className="content-container">
+                    <ExpenseForm 
+                        onSubmit={this.onSubmit}
+                    />
+                </div>
             </div>
         )
         
     }
 }
-
-// USED A CLASS HERE INSTEAD OF FUNCTION 
-// don't want to have onSubmit created inline as it will cause unecessary rerendering
-
-// const AddExpense = (props) => (
-//     <div>
-//         <h1>This is from my add expense component</h1>
-//         <ExpenseForm 
-//             onSubmit={(expense) => {
-//                 console.log(expense);
-//                 // props.dispatch(addExpense(expense));
-//                 props.onSubmit(expense);
-//                 props.history.push('/');
-//             }}
-//         />
-//     </div>
-// );
-
 
 // pass this as second argument in connect
 // this allows us to be able to test props.dispatch(...) with jest

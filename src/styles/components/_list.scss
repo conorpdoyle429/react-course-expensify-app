@@ -1,0 +1,67 @@
+.list-header {
+    background: $light-grey;
+    border: 1px solid darken($color: $light-grey, $amount: 7%);
+    color: $grey;
+    display: flex;
+    justify-content: space-between;
+    padding: $s-size $m-size; // smaller padding on top and bottom
+}
+
+// add a margin between content and bottom of page
+.list-body {
+    margin-bottom: $m-size;
+    @media (min-width: $desktop-breakpoint) {
+        margin-bottom: $l-size;
+    }
+}
+
+.list-item {
+    border: 1px solid darken($color: $light-grey, $amount: 7%);
+    border-top: none; // as we have list items stacked we don't want top borders
+    color: $dark-grey;
+    display: flex;
+    flex-direction: column;
+    padding: $s-size;
+    text-decoration: none; // remove underline
+    transition: background .3s ease; // ease in background in .3 seconds for hover
+    &:hover {
+        background: $light-grey; // change background when hovering 
+    }
+    // split apart amount and titles for large screens
+    @media (min-width: $desktop-breakpoint) {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $m-size;
+    }
+}
+
+// for no expenses message
+.list-item--message {
+    align-items: center;
+    color: $grey;
+    justify-content: center;
+    padding: $m-size;
+    &:hover {
+        background: none;
+    }
+}
+
+.list-item__title {
+    font-size: $font-size-large;
+    margin: 0;
+    word-break: break-all; // break up really long words
+}
+
+.list-item__sub-title {
+    color: $grey;
+    font-size: $font-size-small;
+}
+
+.list-item__data {
+    margin: $s-size 0 0 0 0; // only top margin
+    @media (min-width: $desktop-breakpoint) {
+        margin: 0;
+        padding-left: $s-size;
+    }
+}
